@@ -1,0 +1,96 @@
+--- NOVÝ BĚH SKRIPTU ---
+
+--- FÁZE 0: VÝPOČET POČTU MANDÁTŮ PRO KAŽDÝ KRAJ ---
+    Celkem odevzdaných hlasů v krajích (vstup pro výpočet):
+        Hlavni_mesto_Praha      636042
+Stredocesky_kraj        754016
+Jihocesky_kraj          348347
+Plzensky_kraj           302986
+Karlovarsky_kraj        135439
+Ustecky_kraj            387602
+Liberecky_kraj          230132
+Kralovehradecky_kraj    301924
+Pardubicky_kraj         285378
+Kraj_Vysocina           287922
+Jihomoravsky_kraj       667622
+Olomoucky_kraj          340059
+Zlinsky_kraj            317779
+Moravskoslezsky_kraj    626469
+    
+Celkem hlasů v ČR (bez zahraničí): 5621717
+    Republikové mandátové číslo (float): 5621717 / 200 = 28108.585
+    Republikové mandátové číslo (zaokrouhleno): 28109
+    
+Výpočet mandátů pro kraje - 1. krok (dělení RČ):
+                              hlasy_celkem_kraj  mandaty_kolo1  zbytek
+Hlavni_mesto_Praha               636042             22   17644
+Stredocesky_kraj                 754016             26   23182
+Jihocesky_kraj                   348347             12   11039
+Plzensky_kraj                    302986             10   21896
+Karlovarsky_kraj                 135439              4   23003
+Ustecky_kraj                     387602             13   22185
+Liberecky_kraj                   230132              8    5260
+Kralovehradecky_kraj             301924             10   20834
+Pardubicky_kraj                  285378             10    4288
+Kraj_Vysocina                    287922             10    6832
+Jihomoravsky_kraj                667622             23   21115
+Olomoucky_kraj                   340059             12    2751
+Zlinsky_kraj                     317779             11    8580
+Moravskoslezsky_kraj             626469             22    8071
+    
+Přiděleno mandátů v 1. kroku: 193
+    Zbývá přidělit podle největších zbytků: 7
+    
+Kraje seřazené podle největších zbytků:
+                              hlasy_celkem_kraj  mandaty_kolo1  zbytek
+Stredocesky_kraj                 754016             26   23182
+Karlovarsky_kraj                 135439              4   23003
+Ustecky_kraj                     387602             13   22185
+Plzensky_kraj                    302986             10   21896
+Jihomoravsky_kraj                667622             23   21115
+Kralovehradecky_kraj             301924             10   20834
+Hlavni_mesto_Praha               636042             22   17644
+Jihocesky_kraj                   348347             12   11039
+Zlinsky_kraj                     317779             11    8580
+Moravskoslezsky_kraj             626469             22    8071
+Kraj_Vysocina                    287922             10    6832
+Liberecky_kraj                   230132              8    5260
+Pardubicky_kraj                  285378             10    4288
+Olomoucky_kraj                   340059             12    2751
+    
+FINÁLNÍ ROZDĚLENÍ MANDÁTŮ KRAJŮM:
+                              mandaty_final
+Stredocesky_kraj                 27
+Karlovarsky_kraj                  5
+Ustecky_kraj                     14
+Plzensky_kraj                    11
+Jihomoravsky_kraj                24
+Kralovehradecky_kraj             11
+Hlavni_mesto_Praha               23
+Jihocesky_kraj                   12
+Zlinsky_kraj                     11
+Moravskoslezsky_kraj             22
+Kraj_Vysocina                    10
+Liberecky_kraj                    8
+Pardubicky_kraj                  10
+Olomoucky_kraj                   12
+    
+Slovník mandátů pro další výpočet: {'Stredocesky_kraj': 27, 'Karlovarsky_kraj': 5, 'Ustecky_kraj': 14, 'Plzensky_kraj': 11, 'Jihomoravsky_kraj': 24, 'Kralovehradecky_kraj': 11, 'Hlavni_mesto_Praha': 23, 'Jihocesky_kraj': 12, 'Zlinsky_kraj': 11, 'Moravskoslezsky_kraj': 22, 'Kraj_Vysocina': 10, 'Liberecky_kraj': 8, 'Pardubicky_kraj': 10, 'Olomoucky_kraj': 12}
+
+--- FINÁLNÍ VÝSLEDNÁ TABULKA ---
+                       SPD  SPOLU  Piráti  AUTO  ANO  STAN  Celkem ČR
+Stredoceskyý kraj        2      7       2     2    9     4         26
+Karlovarskyý kraj        0      1       0     0    3     0          4
+Usteckyý kraj            1      2       1     1    7     1         13
+Plzenskyý kraj           1      3       1     1    5     1         12
+Jihomoravskyý kraj       2      7       2     1    9     3         24
+Kralovehradeckyý kraj    1      3       1     1    4     1         11
+Hlavní město Praha       1      9       4     1    5     3         23
+Jihoceskyý kraj          1      3       1     1    5     1         12
+Zlinskyý kraj            1      3       1     1    5     1         12
+Moravskoslezskyý kraj    2      4       2     1   11     2         22
+Kraj Vysocina            1      3       1     1    4     1         11
+Libereckyý kraj          0      1       0     0    3     2          6
+Pardubickyý kraj         1      3       1     1    4     1         11
+Olomouckyý kraj          1      3       1     1    6     1         13
+Celkem mandátů          15     52      18    13   80    22        200
